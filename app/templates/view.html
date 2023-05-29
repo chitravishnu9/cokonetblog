@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+
+<!--<div class="container">-->
+  <div class="row">
+    {% for datas in data %}
+    <div class="col-lg-4">
+
+  <div class="card" >
+    <img class="card-img-top" src="{{datas.img.url}}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{datas.title}}</h4>
+      <p class="card-text">{{datas.desc}}</p>
+      <a href="" class="btn btn-primary">Update</a>
+      <a href="delete/{{datas.id}}" class="btn btn-danger">Delete</a>
+      <a href="edit/{{datas.id}}" class="btn btn-danger">edit</a>
+
+    </div>
+  </div>
+
+    </div>
+    {% endfor %}
+  </div>
+<!--</div>-->
+<br>
+<br>
+
+
+{% endblock %}
